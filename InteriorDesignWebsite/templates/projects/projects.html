@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block content %}    
+
+<div class="container" style="margin-top: 100px">
+    <form method="GET">
+        <h3>{{ project_filter.form|bootstrap }}</h3>
+        <button type="submit">Search</button>
+    </form>
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-md-3">
+                <div class="portfolio-item">
+                    <img class="portfolio-item-title img-responsive" src="{{project.image.url}}"  alt="Project Title"> </a>
+                    <div class="portfolio-item-body">                
+                        <h5 class="portfolio-item-title">{{project.title}}</h5>
+                        <p class="portfolio-item-text">{{project.description}}</p>
+                    </div>
+                </div>  
+            </div>
+        {% endfor %}
+    </div>
+</div>        
+
+{% endblock content %}
+    

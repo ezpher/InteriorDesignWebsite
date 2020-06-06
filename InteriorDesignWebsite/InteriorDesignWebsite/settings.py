@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
+    'bootstrapform',
     'main'
 ]
 
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'InteriorDesignWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates/projects')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
