@@ -45,19 +45,14 @@
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4 service"> <img src="{% static 'img/residential' %}-design.jpg" class="img-responsive" alt="Project Title">
-        <h3>Residential Design</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+    <div class="row">      
+      {% for service in services %}
+      <div class="col-xs-12 col-sm-4 service"> 
+        <img src ="{{ service.image.url }}" class="img-responsive" alt="Project Title">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
       </div>
-      <div class="col-xs-12 col-sm-4 service"> <img src="{% static 'img/office-desi' %}gn.jpg" class="img-responsive" alt="Project Title">
-        <h3>Office Design</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
-      </div>
-      <div class="col-xs-12 col-sm-4 service"> <img src="{% static 'img/commercial-' %}design.jpg" class="img-responsive" alt="Project Title">
-        <h3>Commercial Design</h3>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
-      </div>
+      {% endfor %}        
     </div>
   </div>
 </div>
@@ -206,38 +201,16 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
       </div>
       <div id="row">
+        {% for team_member in team_members %}
         <div class="col-md-3 col-sm-6 team">
-          <div class="thumbnail"> <img src="{% static 'img/team/01.jpg' %}" alt="..." class="team-img">
-            <div class="caption">
-              <h3>John Doe</h3>
-              <p>Director</p>
+            <div class="thumbnail"> <img src="{{ team_member.image.url }}" alt="..." class="team-img">
+              <div class="caption">
+                <h3>{{ team_member.name }}</h3>
+                <p>{{ team_member.position }}</p>
+              </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-3 col-sm-6 team">
-          <div class="thumbnail"> <img src="{% static 'img/team/02.jpg' %}" alt="..." class="img-circle team-img">
-            <div class="caption">
-              <h3>Mike Doe</h3>
-              <p>Senior Designer</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 team">
-          <div class="thumbnail"> <img src="{% static 'img/team/03.jpg' %}" alt="..." class="img-circle team-img">
-            <div class="caption">
-              <h3>Jane Doe</h3>
-              <p>Senior Designer</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 team">
-          <div class="thumbnail"> <img src="{% static 'img/team/04.jpg' %}" alt="..." class="img-circle team-img">
-            <div class="caption">
-              <h3>Karen Doe</h3>
-              <p>Project Manager</p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
