@@ -22,6 +22,7 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('email_confirmation', views.email_confirmation, name='email_confirmation'),
     path('projects/', views.get_projects, name='projects')
 ]
 

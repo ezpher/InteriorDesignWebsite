@@ -126,3 +126,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Email Settings (Local)
+''' 
+for local testing, run following command in bash in virtual env: 
+    python -m smtpd -n -c DebuggingServer localhost:1025
+note that above command is not reliable and may take a while to respond after sending email
+'''
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = '1025' # should be separate from your website port
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = ''
+# EMAIL_USE_SSL = ''
