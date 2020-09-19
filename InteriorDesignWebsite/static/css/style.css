@@ -108,7 +108,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
-	color: #a7c44c;
+	color: #fcb103;
 	font-weight: 400;
 	font-size: 15px;
 	padding: 5px 0;
@@ -132,8 +132,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	border-radius: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #a7c44c;
-	border-color: #a7c44c;
+	background-color: #fcb103;
+	border-color: #fcb103;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
